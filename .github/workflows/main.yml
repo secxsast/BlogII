@@ -21,6 +21,6 @@ jobs:
          cx_client_secret: ${{ secrets.SECRET }}
          branch: ${{ github.ref }}
          additional_params: 
-          --thresholds 
+          --threshold 
              sca-high=20; 
              sast-high=1;
