@@ -1,0 +1,25 @@
+name: ASTCxSAST
+on:
+  push:
+   branches:
+     - main
+     - develop
+     - develop2
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+     - name: Checkout
+       uses: actions/checkout@v2
+     - name: Checkmarx AST CLI Action
+       uses: checkmarx/ast-github-action@main #Github Action version
+       with:
+         project_name: ${{ github.repository }}
+         cx_tenant: nfr_trustdimension
+         base_uri: https://ast.checkmarx.net
+         cx_client_id: ${{ secrets.CLIENT_ID }}
+         cx_client_secret: ${{ secrets.SECRET }}
+         branch: ${{ github.ref }}
+         additional_params:
+          --threshold "sast-high=1; sast-medium=1"
+          --project-tags oxxo_ta,ta
