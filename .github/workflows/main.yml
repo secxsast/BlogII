@@ -3,8 +3,8 @@ on:
   push:
    branches:
      - main
-     - AST
-     - SAST2
+     - develop
+     - develop4
 jobs:
   build:
     runs-on: ubuntu-latest
