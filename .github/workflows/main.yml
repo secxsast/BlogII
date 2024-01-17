@@ -22,5 +22,5 @@ jobs:
          branch: ${{ github.ref }}
          additional_params:
           --threshold "sast-high=1; sast-medium=1"
-          --project-tags oxxo_ta,ta
-          --tags OXXO_Scan
+          --project-tags tag1,tag2
+          --tags tag_scan
