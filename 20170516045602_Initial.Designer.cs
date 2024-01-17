@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Blog.Models;
-
+//Laboratorio Checkmarx
 namespace Blog.Migrations
 {
     [DbContext(typeof(UserContext))]
